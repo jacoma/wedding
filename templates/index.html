@@ -17,6 +17,10 @@
     <link
         href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
         rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Slab&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Rock+Salt&display=swap" rel="stylesheet">
+    <link href="{% static 'css/fonts.css' %}" rel="stylesheet">
+
     <!-- Stylesheets -->
     <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
     <script src="{% static 'js/map.js' %}"></script>
@@ -26,7 +30,7 @@
 
 <body id="page-top">
     <!-- Navigation-->
-    <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+    <!-- <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
         <div class="container px-4 px-lg-5">
             <a class="navbar-brand" href="#page-top"></a>
             <button class="navbar-toggler navbar-toggler-right" type="button" data-bs-toggle="collapse"
@@ -37,13 +41,13 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarResponsive">
                 <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link" href="#about">Wedding Day</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#projects">Location</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#signup">Contact</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#day">Wedding Day</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#story">Our Story</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#location">Location</a></li>
                 </ul>
             </div>
         </div>
-    </nav>
+    </nav> -->
     <!-- Masthead-->
     <header class="masthead">
         <div id='intro' class="container px-4 px-lg-5 d-flex h-100 align-items-center justify-content-center">
@@ -53,73 +57,330 @@
                 </div>
             </div>
         </div>
+        <p id='header_title'>Love Goes</p>
     </header>
     <!-- About-->
     <section class="about-section text-center" id="about">
         <div class="container px-4 px-lg-5">
             <div class="row gx-4 gx-lg-5 justify-content-center">
                 <div class="col-lg-8">
-                    <h2 class="text-white mb-4">A Story of Impossibilities</h2>
+                    <br>
+                    <h1 class="text-white mb-4 mt-6" id='header_subtitle'>A Story of Impossibilities</h1>
                     <p class="text-white">
-                        Like a song of love that clings to me <br>
-                        How the thought of you does things to me <br>
-                        Never before has someone been more <br>
-                        Unforgettable...
+                        Presented by: Jacob + Matthew
                     </p>
+                    <p><span class="text-black m-4 h4">May 06, 2022</span><span class="text-black m-4 h4">Seattle,
+                            WA</span></p>
                 </div>
             </div>
         </div>
     </section>
-    <!-- Projects-->
-    <section class="projects-section" id="projects">
-        <!-- <div class="container px-4 px-lg-5">
-            Featured Project Row
-            <div class="row gx-0 mb-4 mb-lg-5 align-items-center">
-                <div class="col-xl-8 col-lg-7"><img class="img-fluid mb-3 mb-lg-0" src="{% static 'assets/img/cycle.jpg' %}"
-                        alt="..." /></div>
-                <div class="col-xl-4 col-lg-5">
-                    <div class="featured-text text-center text-lg-left">
-                        <h4>Shoreline</h4>
-                        <p class="text-black-50 mb-0">Grayscale is open source and MIT licensed. This means you can use
-                            it for any project - even commercial projects! Download it, customize it, and publish your
-                            website!</p>
-                    </div>
-                </div>
-            </div> -->
-            <!-- Project One Row-->
-            <div class="row px-3 gx-0 mb-5 mb-lg-0 justify-content-center">
-                <div class="col-lg-6"><img class="img-fluid" src="{% static 'assets/img/cycle.jpg' %}" alt="..." /></div>
-                <div class="col-lg-6">
-                    <div class="bg-black text-center h-100 project">
-                        <div class="d-flex h-100">
-                            <div class="project-text w-100 my-auto text-center text-lg-left">
-                                <h4 class="text-white">Misty</h4>
-                                <p class="mb-0 text-white-50">An example of where you can put an image of a project, or
-                                    anything else, along with a description.</p>
-                                <hr class="d-none d-lg-block mb-0 ms-0" />
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- Project Two Row-->
-            <div class="row px-3 gx-0 justify-content-center">
-                <div class="col-lg-6"><img class="img-fluid" src="{% static 'assets/img/lime.jpg' %}" alt="..." /></div>
-                <div class="col-lg-6 order-lg-first">
-                    <div class="bg-black text-center h-100 project">
-                        <div class="d-flex h-100">
-                            <div class="project-text w-100 my-auto text-center text-lg-right">
-                                <h4 class="text-white">Mountains</h4>
-                                <p class="mb-0 text-white-50">Another example of a project with its respective
-                                    description. These sections work well responsively as well, try this theme on a
-                                    small screen!</p>
-                                <hr class="d-none d-lg-block mb-0 me-0" />
-                            </div>
-                        </div>
-                    </div>
+    <!-- Story Timeline -->
+    <section class="projects-section text-center" id="projects">
+        <hr class="section-break-4" />
+        <div class="container px-4 px-lg-5 mb-5 mt-5">
+            <div class="row gx-4 gx-lg-5 justify-content-center">
+                <div class="col-lg-8">
+                    <p class="text-black mb-5 mt-5 h1">
+                        The greatest story ever told -<br>
+                        let's make it a musical.<br>
+                        <br>
+                        <br>
+                        <br>
+                        -- 2015 --<br>
+                    </p>
                 </div>
             </div>
         </div>
+        <div class="timeline mb-4">
+            <div class="timeline-container left">
+                <div class="timeline-content">
+                    <img class="img-fluid rounded mb-2" src="{% static 'assets/img/datstat_run.jpg' %}" alt="..." />
+                    <p class = 'pic_date'>June</p>
+                    <p class='pic_lyric'>"You walked into the room now my heart's been stolen."<br>
+                        <span class='song_span text-muted'><a class='song_link' target="_blank" href='https://www.youtube.com/watch?v=L3dPK8tDn6g'>Listen to Song</a></span>
+                    </p>
+                </div>
+            </div>
+
+            <div class="timeline-container right">
+                <div class="timeline-content">
+                    <img class="img-fluid rounded  mb-2" src="{% static 'assets/img/FirstChristmas.jpg' %}" alt="..." />
+                    <p class = 'pic_date'>Dec</p>
+                    <p class='pic_lyric'>"Kiss me like you want to be loved."<br>
+                        <span class='song_span text-muted'><a class='song_link' target="_blank" href='https://www.youtube.com/watch?v=3IUfGfOK3z0'>Listen to Song</a></span></p>
+                </div>
+            </div>
+        </div>
+        <div class="container px-4 px-lg-5 mb-5 mt-5">
+            <div class="row gx-4 gx-lg-5 justify-content-center">
+                <div class="col-lg-8">
+                    <p class="font-italic text-black mb-5 mt-5 h3 ">
+                        -- 2016 --<br>
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="timeline mb-4">
+            <div class="timeline-container left">
+                <div class="timeline-content">
+                    <img class="img-fluid rounded mb-2" src="{% static 'assets/img/jj_wedding.jpeg' %}" alt="..." />
+                    <p class = 'pic_date'>Feb</p>
+                    <p class='pic_lyric'>"Nothing I can see but you when you dance."<br>
+                    <span class='song_span text-muted'><a class='song_link' target="_blank" href='https://www.youtube.com/watch?v=ru0K8uYEZWw'>Listen to Song</a></span>
+                </p>
+                </div>
+            </div>
+            <div class="timeline-container right">
+                <div class="timeline-content">
+                    <img class="img-fluid rounded  mb-2" src="{% static 'assets/img/50_birthday.jpg' %}" alt="..." />
+                    <p class = 'pic_date'>July</p>
+                    <p class='pic_lyric'>"If it were my birthday...I'd be wishin' for someone like you."<br>
+                        <span class='song_span text-muted'><a class='song_link' target="_blank" href='https://www.youtube.com/watch?v=aPx-l5EPNig'>Listen to Song</a></span>
+                    </p>
+                </div>
+            </div>
+            <div class="timeline-container left">
+                <div class="timeline-content">
+                    <img class="img-fluid rounded mb-2" src="{% static 'assets/img/prague.jpg' %}" alt="..." />
+                    <p class = 'pic_date'>Aug</p>
+                    <p class = 'pic_lyric'>I search through the crowd - your face is all that I see.<br>
+                        <span class='song_span text-muted'><a class='song_link' target="_blank" href='https://www.youtube.com/watch?v=7L-Rwxoc2jU'>Listen to Song</a></span>
+                    </p>
+                </div>
+            </div>
+            <div class="timeline-container right">
+                <div class="timeline-content">
+                    <img class="img-fluid rounded  mb-2" src="{% static 'assets/img/santorini_driving.jpg' %}" alt="..." />
+                    <p class = 'pic_date'>Aug</p>
+                    <p class='pic_lyric'>"There's something special 'bout you, I must really like you"<br>
+                        <span class='song_span text-muted'><a class='song_link' target="_blank" href='https://www.youtube.com/watch?v=_ST6ZRbhGiA'>Listen to Song</a></span>
+                    </p>
+                </div>
+            </div>
+            <div class="timeline-container left">
+                <div class="timeline-content">
+                    <img class="img-fluid rounded  mb-2" src="{% static 'assets/img/oia_sunset.JPG' %}" alt="..." />
+                    <p class = 'pic_date'>Aug</p>
+                    <p class='pic_lyric'>"You look like a movie. You sound like a song."<br>
+                        <span class='song_span text-muted'><a class='song_link' target="_blank" href='https://www.youtube.com/watch?v=DDWKuo3gXMQ'>Listen to Song</a></span>
+                    </p>
+                </div>
+            </div>
+            <div class="timeline-container right">
+                <div class="timeline-content">
+                    <img class="img-fluid rounded  mb-2" src="{% static 'assets/img/20160924_164640.jpg' %}" alt="..." />
+                    <p class = 'pic_date'>Sept</p>
+                    <p class='pic_lyric'>"You're the coffee that I need in the morning."<br>
+                        <span class='song_span text-muted'><a class='song_link' target="_blank" href='https://www.youtube.com/watch?v=vBy7FaapGRo'>Listen to Song</a></span>
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="container px-4 px-lg-5 mb-5 mt-5">
+            <div class="row gx-4 gx-lg-5 justify-content-center">
+                <div class="col-lg-8">
+                    <p class="text-black mb-5 mt-5 h2">
+                        -- 2017 --<br>
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="timeline mb-4">
+            <div class="timeline-container left">
+                <div class="timeline-content">
+                    <img class="img-fluid rounded  mb-2" src="{% static 'assets/img/matt_wedding.jfif' %}" alt="..." />
+                    <p class = 'pic_date'>Feb</p>
+                    <p class='pic_lyric'>"We'll both be beautiful and stay forever young."<br>
+                        <span class='song_span text-muted'><a class='song_link' target="_blank" href='https://www.youtube.com/watch?v=KEI4qSrkPAs'>Listen to Song</a></span>
+                    </p>
+                </div>
+            </div>
+            <div class="timeline-container right">
+                <div class="timeline-content">
+                    <img class="img-fluid rounded  mb-2" src="{% static 'assets/img/diane.jfif' %}" alt="..." />
+                    <p class = 'pic_date'>May</p>
+                    <p class='pic_lyric'>"I need you in my life."<br>
+                        <span class='song_span text-muted'><a class='song_link' target="_blank" href='https://www.youtube.com/watch?v=D30u9m-nEoo'>Listen to Song</a></span>
+                    </p>
+                </div>
+            </div>
+            <div class="timeline-container left">
+                <div class="timeline-content">
+                    <img class="img-fluid rounded  mb-2" src="{% static 'assets/img/20170630.jpg' %}" alt="..." />
+                    <p class = 'pic_date'>June</p>
+                    <p class='pic_lyric'>"I knew you'd linger like a tattoo kiss."<br>
+                        <span class='song_span text-muted'><a class='song_link' target="_blank" href='https://www.youtube.com/watch?v=K-a8s8OLBSE'>Listen to Song</a></span>
+                    </p>
+                </div>
+            </div>
+            <div class="timeline-container right">
+                <div class="timeline-content">
+                    <img class="img-fluid rounded  mb-2" src="{% static 'assets/img/20170723_162639.jpg' %}" alt="..." />
+                    <p class = 'pic_date'>July</p>
+                    <p class='pic_lyric'>"Watch you smile while you are sleeping."<br>
+                        <span class='song_span text-muted'><a class='song_link' target="_blank" href='https://www.youtube.com/watch?v=l8AalbfPv8I'>Listen to Song</a></span>
+                    </p>
+                </div>
+            </div>
+            <div class="timeline-container left">
+                <div class="timeline-content">
+                    <img class="img-fluid rounded  mb-2" src="{% static 'assets/img/dressup.jpg' %}" alt="..." />
+                    <p class = 'pic_date'>Aug</p>
+                    <p class='pic_lyric'>"With a smile, you pull the deepest secrets from my heart."<br>
+                        <span class='song_span text-muted'><a class='song_link' target="_blank" href='https://www.youtube.com/watch?v=B93Tir6l5FA'>Listen to Song</a></span>
+                    </p>
+                </div>
+            </div>
+            <div class="timeline-container right">
+                <div class="timeline-content">
+                    <img class="img-fluid rounded  mb-2" src="{% static 'assets/img/20170915_134339.jpg' %}" alt="..." />
+                    <p class = 'pic_date'>Sept</p>
+                    <p class='pic_lyric'>"You got that James-Dean-daydream look in your eyes."<br>
+                        <span class='song_span text-muted'><a class='song_link' target="_blank" href='https://www.youtube.com/watch?v=-CmadmM5cOk'>Listen to Song</a></span>
+                    </p>
+                </div>
+            </div>
+            <div class="timeline-container left">
+                <div class="timeline-content">
+                    <img class="img-fluid rounded  mb-2" src="{% static 'assets/img/20171111_203557.jpg' %}" alt="..." />
+                    <p class = 'pic_date'>Nov</p>
+                    <p class='pic_lyric'>"And you're making me feel like maybe I am somebody."<br>
+                        <span class='song_span text-muted'><a class='song_link' target="_blank" href='https://www.youtube.com/watch?v=y83x7MgzWOA'>Listen to Song</a></span>
+                    </p>
+                </div>
+            </div>
+            <div class="timeline-container right">
+                <div class="timeline-content">
+                    <img class="img-fluid rounded  mb-2" src="{% static 'assets/img/20171222_193613.jpg' %}" alt="..." />
+                    <p class = 'pic_date'>Dec</p>
+                    <p class='pic_lyric'>"I try to catch myself but I'm outta control."<br>
+                        <span class='song_span text-muted'><a class='song_link' target="_blank" href='https://www.youtube.com/watch?v=RQ9BWndKEgs'>Listen to Song</a></span>
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="container px-4 px-lg-5 mb-5 mt-5">
+            <div class="row gx-4 gx-lg-5 justify-content-center">
+                <div class="col-lg-8">
+                    <p class="text-black mb-5 mt-5 h3">
+                        -- 2018 --<br>
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="timeline mb-4">
+            <div class="timeline-container left">
+                <div class="timeline-content">
+                    <img class="img-fluid rounded  mb-2" src="{% static 'assets/img/1594641755590.jpg' %}" alt="..." />
+                    <p class = 'pic_date'>Jan</p>
+                    <p class='pic_lyric'>"Don't ask me what you know is true. Don't have to tell you I love your precious heart"<br>
+                        <span class='song_span text-muted'><a class='song_link' target="_blank" href='https://www.youtube.com/watch?v=AIBv2GEnXlc'>Listen to Song</a></span>
+                    </p>
+                </div>
+            </div>
+            <div class="timeline-container right">
+                <div class="timeline-content">
+                    <img class="img-fluid rounded  mb-2" src="{% static 'assets/img/20180211_141508.jpg' %}" alt="..." />
+                    <p class = 'pic_date'>Feb</p>
+                    <p class='pic_lyric'>"My sunrise on the darkest day; got me feelin' some kind of way."<br>
+                        <span class='song_span text-muted'><a class='song_link' target="_blank" href='https://www.youtube.com/watch?v=dr_GAJZviR0'>Listen to Song</a></span>
+                    </p>
+                </div>
+            </div>
+            <div class="timeline-container left">
+                <div class="timeline-content">
+                    <img class="img-fluid rounded  mb-2" src="{% static 'assets/img/lime.jpg' %}" alt="..." />
+                    <h3>May</h3>
+                    <p class='pic_lyric'>"I was hoping I could get lost in your paradise"<br>
+                        <span class='song_span text-muted'><a class='song_link' target="_blank" href='https://www.youtube.com/watch?v=SAWzXkV3hHo'>Listen to Song</a></span>
+                    </p>
+                </div>
+            </div>
+            <div class="timeline-container right">
+                <div class="timeline-content">
+                    <img class="img-fluid rounded  mb-2" src="{% static 'assets/img/duncan_men.jfif' %}" alt="..." />
+                    <p class = 'pic_date'>July</p>
+                    <p class='pic_lyric'>"I won't give up on us - giving you all my love."<br>
+                        <span class='song_span text-muted'><a class='song_link' target="_blank" href='https://www.youtube.com/watch?v=O1-4u9W-bns'>Listen to Song</a></span>
+                    </p>
+                </div>
+            </div>
+            <div class="timeline-container left">
+                <div class="timeline-content">
+                    <img class="img-fluid rounded  mb-2" src="{% static 'assets/img/rsvp.jfif' %}" alt="..." />
+                    <p class = 'pic_date'>Aug</p>
+                    <p class='pic_lyric'>"The rarest love; who'd think I'd find someone like you to call mine."<br>
+                        <span class='song_span text-muted'><a class='song_link' target="_blank" href='https://www.youtube.com/watch?v=1-7ABIM2qjU'>Listen to Song</a></span>
+                    </p>
+                </div>
+            </div>
+            <div class="timeline-container right">
+                <div class="timeline-content">
+                    <img class="img-fluid rounded  mb-2" src="{% static 'assets/img/machu.jfif' %}" alt="..." />
+                    <p class = 'pic_date'>Sept</p>
+                    <p class='pic_lyric'>"How does it feel to know that I love you."<br>
+                        <span class='song_span text-muted'><a class='song_link' target="_blank" href='https://www.youtube.com/watch?v=0DdCoNbbRvQ'>Listen to Song</a></span>
+                    </p>
+                </div>
+            </div>
+            <div class="timeline-container left">
+                <div class="timeline-content">
+                    <img class="img-fluid rounded  mb-2" src="{% static 'assets/img/vancouver.jfif' %}" alt="..." />
+                    <p class = 'pic_date'>Dec</p>
+                    <p class='pic_lyric'>"The blush on your cheek whenever I speak tells me that you are my own."<br>
+                        <span class='song_span text-muted'><a class='song_link' target="_blank" href='https://www.youtube.com/watch?v=u1hbwc8ADKg'>Listen to Song</a></span>
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="container px-4 px-lg-5 mb-5 mt-5">
+            <div class="row gx-4 gx-lg-5 justify-content-center">
+                <div class="col-lg-8">
+                    <p class="text-black mb-5 mt-5 h3">
+                        -- 2019 -- <br>
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="container px-4 px-lg-5 mb-5 mt-5">
+            <div class="row gx-4 gx-lg-5 justify-content-center">
+                <div class="col-lg-8">
+                    <p class="text-black mb-5 mt-5 h3">
+                        Intermission <br>
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="container px-4 px-lg-5 mb-5 mt-5">
+            <div class="row gx-4 gx-lg-5 justify-content-center">
+                <div class="col-lg-8">
+                    <p class="text-black mb-5 mt-5 h3">
+                        -- 2020 --<br>
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="timeline mb-4">
+            <div class="timeline-container right">
+                <div class="timeline-content">
+                    <img class="img-fluid rounded  mb-2" src="{% static 'assets/img/moab_arch.jfif' %}" alt="..." />
+                    <p class = 'pic_date'>Sept</p>
+                    <p class='pic_lyric'>"If you told me the world's ending ain't no better way I could spend it."<br>
+                        <span class='song_span text-muted'><a class='song_link' target="_blank" href='https://www.youtube.com/watch?v=pE49WK-oNjU'>Listen to Song</a></span>
+                    </p>
+                </div>
+            </div>
+            <div class="timeline-container left">
+                <div class="timeline-content">
+                    <img class="img-fluid rounded  mb-2" src="{% static 'assets/img/birthday_cute.jfif' %}" alt="..." />
+                    <p class = 'pic_date'>Mar</p>
+                    <p class='pic_lyric'>"Like a song of love that clings to me. How the thought of you does things to me."<br>
+                        <span class='song_span text-muted'><a class='song_link' target="_blank" href='https://www.youtube.com/watch?v=u1hbwc8ADKg'>Listen to Song</a></span>
+                    </p>
+                </div>
+            </div>
+    </div>
     </section>
     <!-- LOCATION -->
     <section class="location-section" id="Location">
@@ -138,10 +399,9 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous">
     </script>
-        <script
+    <script
         src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDvbX_6TXKSNGK5eLKtbOx-KyxMUwhQ2mM&callback=initMap&libraries=&v=weekly&channel=2"
-        async
-      ></script>
+        async></script>
     <!-- Core theme JS-->
     <script src="{% static 'js/scripts.js' %}"></script>
     <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
