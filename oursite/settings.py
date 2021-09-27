@@ -12,21 +12,25 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 
 from pathlib import Path
 import os
+from dotenv import load_dotenv
+load_dotenv()
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
+# print(BASE_DIR)
 
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/3.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-24=f7y8h#h$x)9&^xxdsbtuutv%bxzkv-0re8lvcd%4t@u24fc'
+## SECRET_KEY = 'django-insecure-24=f7y8h#h$x)9&^xxdsbtuutv%bxzkv-0re8lvcd%4t@u24fc' ## DEV SECRECT KEY
+SECRET_KEY = os.getenv('SECRET_KEY', 'django-insecure-24=f7y8h#h$x)9&^xxdsbtuutv%bxzkv-0re8lvcd%4t@u24fc')
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [os.getenv('WEBSITE_HOSTNAME'), '127.0.0.1']
 
 
 # Application definition
@@ -38,7 +42,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'baseApp'
+    'baseApp',
+    'storages'
 ]
 
 MIDDLEWARE = [
@@ -118,11 +123,19 @@ USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.2/howto/static-files/
-
-STATIC_URL = '/static/'
 STATICFILES_DIRS =[
     os.path.join(BASE_DIR, 'static'),
 ]
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+
+DEFAULT_FILE_STORAGE = 'oursite.backend.AzureMediaStorage'
+STATICFILES_STORAGE = 'oursite.backend.AzureStaticStorage'
+
+AZURE_ACCOUNT_NAME = os.getenv('AZ_STORAGE_NAME')
+AZURE_CUSTOM_DOMAIN = f'{AZURE_ACCOUNT_NAME}.blob.core.windows.net'
+STATIC_LOCATION = os.getenv('AZ_STATIC_CONTAINER')
+
+STATIC_URL = f'https://{AZURE_CUSTOM_DOMAIN}/{STATIC_LOCATION}/'
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
